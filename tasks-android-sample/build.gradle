@@ -1,4 +1,4 @@
-apply plugin: 'android'
+apply plugin: 'com.android.application'
 
 repositories {
     mavenCentral()
@@ -6,19 +6,19 @@ repositories {
 }
 
 dependencies {
-    compile 'com.google.apis:google-api-services-tasks:v1-rev48-1.23.0' exclude module: 'httpclient'
-    compile 'com.google.api-client:google-api-client-android:1.23.0' exclude module: 'httpclient'
-    compile 'com.google.http-client:google-http-client-gson:1.23.0' exclude module: 'httpclient'
-    compile 'com.google.android.gms:play-services-identity:7.3.0'
+    implementation 'com.google.apis:google-api-services-tasks:v1-rev48-1.23.0' exclude module: 'httpclient'
+    implementation 'com.google.api-client:google-api-client-android:1.23.0' exclude module: 'httpclient'
+    implementation 'com.google.http-client:google-http-client-gson:1.23.0' exclude module: 'httpclient'
+    implementation 'com.google.android.gms:play-services-identity:7.3.0'
 }
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion "22.0.1"
+    compileSdkVersion 26
+    //buildToolsVersion "22.0.1"
 
     defaultConfig {
         minSdkVersion 11
-        targetSdkVersion 22
+        targetSdkVersion 26
     }
 
     sourceSets {
